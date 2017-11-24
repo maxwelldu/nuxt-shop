@@ -128,7 +128,7 @@ export default{
   },
   methods: {
     checkLogin () {
-      this.$http.get('/api/users/checkLogin').then(response => {
+      this.$http.get('/users/checkLogin').then(response => {
         var res = response.data
         if (res.status === '0') {
           this.getCartCount()
@@ -142,7 +142,7 @@ export default{
       })
     },
     regis () {
-      this.$http.post('/api/users/register', this.register)
+      this.$http.post('/users/register', this.register)
         .then(res => {
           res = res.data
           if (res.status === '0') {
@@ -156,7 +156,7 @@ export default{
         this.errorTip = true
         return
       }
-      this.$http.post('/api/users/login', {
+      this.$http.post('/users/login', {
         userName: this.userName,
         userPwd: this.userPwd
       }).then(response => {
@@ -172,7 +172,7 @@ export default{
       })
     },
     logOut () {
-      this.$http.post('/api/users/logout').then(response => {
+      this.$http.post('/users/logout').then(response => {
         let res = response.data
         if (res.status === '0') {
           this.$store.commit('updateUserInfo', res.result.userName)
@@ -181,7 +181,7 @@ export default{
       })
     },
     getCartCount () {
-      this.$http.get('/api/users/getCartCount').then(res => {
+      this.$http.get('/users/getCartCount').then(res => {
         res = res.data
         if (res.status === '0') {
           this.$store.commit('updateCartCount', res.result)
