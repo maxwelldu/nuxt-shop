@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="">
       商品详情页 {{ $route.params.productId }}
-      <img :src="'static/' + goods.productImage" alt="">
+      <img :src="'/' + goods.productImage" alt="">
       <span>{{ goods.productName }}</span>
       <span>{{ goods.salePrice }}</span>
       <button type="button" name="button" @click="addCart">加入购物车</button>

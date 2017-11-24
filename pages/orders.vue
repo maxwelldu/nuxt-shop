@@ -68,7 +68,7 @@
               <li v-for="item in order.goodsList">
                 <div class="cart-tab-1">
                   <div class="cart-item-pic">
-                    <img v-lazy="'/static/'+item.productImage" v-bind:alt="item.productName">
+                    <img v-lazy="'/'+item.productImage" v-bind:alt="item.productName">
                   </div>
                   <div class="cart-item-title">
                     <div class="item-name">{{item.productName}}</div>
@@ -117,9 +117,9 @@
   }
 </style>
 <script>
-import '@/assets/css/cart.css'
-import Public from '@/Public'
-import Modal from '@/components/Modal'
+import '~/assets/css/cart.css'
+import Public from '~/Public'
+import Modal from '~/components/Modal'
 export default {
   layout: 'shop',
   data () {

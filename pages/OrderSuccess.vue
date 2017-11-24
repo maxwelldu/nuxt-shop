@@ -15,7 +15,7 @@
         </div>
 
         <div class="order-create">
-          <div class="order-create-pic"><img src="/static/ok-2.png" alt=""></div>
+          <div class="order-create-pic"><img src="/ok-2.png" alt=""></div>
           <div class="order-create-main">
             <h3>恭喜你购买成功! <br>您的订单已经被处理!</h3>
             <p>
@@ -36,7 +36,7 @@
     </div>
 </template>
 <script>
-import Public from '@/Public'
+import Public from '~/Public'
 export default {
   layout: 'shop',
   data () {

@@ -24,6 +24,23 @@ module.exports = {
     src: '~plugins/infinite-scroll',
     ssr: false
   }],
+  modules: [
+    '@nuxtjs/proxy'
+  ],
+  proxy: [
+      [
+        '/users',
+        {
+          target: 'http://localhost:3000', // api主机
+        }
+      ],
+      [
+        '/goods',
+        {
+          target: 'http://localhost:3000'
+        }
+      ]
+  ],
   /*
   ** Build configuration
   */
