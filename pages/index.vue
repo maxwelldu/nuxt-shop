@@ -29,7 +29,7 @@
                 <ul>
                   <li v-for="item in goodsList" @click="goDetail(item.productId)">
                     <div class="pic">
-                      <a href="#"><img v-lazy="'static/'+item.productImage" alt=""></a>
+                      <a href="#"><img v-lazy="'/'+item.productImage" alt=""></a>
                     </div>
                     <div class="main">
                       <div class="name">{{item.productName}}</div>
@@ -76,13 +76,16 @@
 </template>
 
 <script>
-import NavBread from '~/components/NavBread'
+
+// import NavBread from '~/components/NavBread'
+import Public from '~/Public'
 import Modal from '../components/Modal'
 export default {
   layout: 'shop',
+  mixins: [Public],
   components: {
-    Modal,
-    NavBread
+    Modal
+    // NavBread
   },
   data () {
     return {

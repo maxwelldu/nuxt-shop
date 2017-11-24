@@ -20,7 +20,10 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
-  plugins: ['~plugins/vue-axios', '~plugins/lazy-load', '~plugins/infinite-scroll'],
+  plugins: ['~plugins/vue-axios', '~plugins/lazy-load', '~plugins/currency', {
+    src: '~plugins/infinite-scroll',
+    ssr: false
+  }],
   /*
   ** Build configuration
   */

@@ -3,6 +3,7 @@
 > Nuxt.js project
 
 跨域还没做好，然后有vuex还没配置好
+document没找到，应该配置只在浏览器端运行，ssr: false
 
 ## Build Setup
 
